@@ -246,3 +246,43 @@ cursor.classList.remove("scan");
 
 
 });
+
+const particleContainer =
+document.getElementById("cursor-particles");
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+
+const particle =
+document.createElement("div");
+
+
+particle.className =
+"cursor-particle";
+
+
+particle.style.left =
+e.clientX + "px";
+
+
+particle.style.top =
+e.clientY + "px";
+
+
+
+particleContainer.appendChild(particle);
+
+
+
+setTimeout(()=>{
+
+particle.remove();
+
+},800);
+
+
+
+});
