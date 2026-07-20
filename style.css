@@ -580,3 +580,23 @@ button:hover {
     font-family:'Cinzel', serif;
 
 }
+
+/* =========================
+   SECRET CHAMPION
+========================= */
+
+
+#duo .profile-box {
+
+    margin:15px 0;
+
+}
+
+
+#duo span {
+
+    color:#b9c8d8;
+
+    font-size:13px;
+
+}
