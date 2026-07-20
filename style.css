@@ -3,6 +3,10 @@
 }
 
 
+/* =========================
+   GLOBAL
+========================= */
+
 body {
 
     margin:0;
@@ -12,9 +16,11 @@ body {
     radial-gradient(circle at center,
     rgba(40,90,130,0.35),
     transparent 35%),
+
     radial-gradient(circle at bottom,
     rgba(200,167,90,0.12),
     transparent 45%),
+
     linear-gradient(
     135deg,
     #02050b,
@@ -22,23 +28,24 @@ body {
     #02050b
     );
 
-
     overflow:hidden;
 
-
     color:#e7dfc9;
-
 
     font-family:'Inter', sans-serif;
 
 }
 
 
-/* magical particles */
+
+/* =========================
+   BACKGROUND EFFECTS
+========================= */
 
 .particles {
 
     position:absolute;
+
     width:100%;
     height:100%;
 
@@ -49,7 +56,31 @@ body {
 
     opacity:0.15;
 
+    animation:
+    drift 20s infinite linear;
+
 }
+
+
+
+@keyframes drift {
+
+    from {
+        transform:translateY(0);
+    }
+
+    to {
+        transform:translateY(-80px);
+    }
+
+}
+
+
+
+
+/* =========================
+   SCREENS
+========================= */
 
 
 .screen {
@@ -67,12 +98,18 @@ body {
 }
 
 
+
 .hidden {
 
     display:none;
 
 }
 
+
+
+/* =========================
+   LOADING
+========================= */
 
 
 .client-title {
@@ -92,6 +129,7 @@ body {
     font-family:'Cinzel', serif;
 
 }
+
 
 
 .loading-box {
@@ -152,12 +190,18 @@ body {
 
 
 
+
+
+/* =========================
+   CARDS
+========================= */
+
+
 .card {
 
     width:420px;
 
     padding:35px;
-
 
     text-align:center;
 
@@ -177,6 +221,7 @@ body {
     box-shadow:
 
     0 0 30px rgba(0,180,255,0.12),
+
     inset 0 0 40px rgba(200,167,90,0.08);
 
 
@@ -185,21 +230,40 @@ body {
 
     position:relative;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
 
 }
 
 
 
-.small-title {
+.card::before,
+.card::after {
+
+    content:"✦";
+
+    position:absolute;
 
     color:#c8a75a;
 
-    letter-spacing:3px;
+    font-size:18px;
 
 }
+
+
+.card::before {
+
+    top:12px;
+    left:15px;
+
+}
+
+
+.card::after {
+
+    bottom:12px;
+    right:15px;
+
+}
+
 
 
 
@@ -213,7 +277,6 @@ body {
 
     margin:25px 0;
 
-
     color:#f1d98a;
 
 
@@ -225,25 +288,14 @@ body {
 
 
 
-.status {
 
-    color:#62d26f;
-
-    margin-bottom:35px;
-
-}
-
-
-
-.event-text {
-
-    margin-bottom:35px;
-
-}
-
+/* =========================
+   BUTTONS
+========================= */
 
 
 button {
+
 
     background:
 
@@ -281,6 +333,9 @@ button {
     position:relative;
 
 
+    margin-top:20px;
+
+
 }
 
 
@@ -288,144 +343,41 @@ button {
 button:hover {
 
 
-    transform:translateY(-3px);
+    transform:scale(1.05);
 
 
     box-shadow:
 
-    0 0 25px rgba(241,217,138,0.7);
+    0 0 20px #c8a75a;
 
 
 }
 
-button:hover {
 
-    transform:scale(1.05);
 
-    box-shadow:0 0 20px #c8a75a;
 
-}
+/* =========================
+   TEXT ELEMENTS
+========================= */
+
 
 .gold {
 
-color:#c8a75a;
+    color:#c8a75a;
 
-letter-spacing:3px;
+    letter-spacing:3px;
 
 }
+
 
 
 .online {
 
-color:#62d26f;
+    color:#62d26f;
 
 }
 
 
-.profile-box {
-
-margin:30px 0;
-
-padding:20px;
-
-border:1px solid #c8a75a;
-
-}
-
-
-.reward {
-
-margin:30px;
-
-}
-
-
-.duo-container {
-
-display:flex;
-
-align-items:center;
-
-gap:40px;
-
-}
-
-
-.champion {
-
-width:280px;
-
-}
-
-
-.vs {
-
-font-size:40px;
-
-color:#c8a75a;
-
-}
-
-
-button {
-
-margin-top:20px;
-
-}
-
-.card::before,
-.card::after {
-
-    content:"✦";
-
-    position:absolute;
-
-    color:#c8a75a;
-
-    font-size:18px;
-
-}
-
-
-.card::before {
-
-    top:12px;
-    left:15px;
-
-}
-
-
-.card::after {
-
-    bottom:12px;
-    right:15px;
-
-}
-
-.particles {
-
-    animation:
-    drift 20s infinite linear;
-
-}
-
-
-@keyframes drift {
-
-    from {
-
-    transform:translateY(0);
-
-    }
-
-
-    to {
-
-    transform:translateY(-80px);
-
-    }
-
-}
 
 .title {
 
@@ -438,13 +390,32 @@ margin-top:20px;
 }
 
 
+
+
+/* =========================
+   PROFILE
+========================= */
+
+
+.profile-box {
+
+    margin:20px 0;
+
+    padding:15px;
+
+    border:1px solid rgba(200,167,90,0.7);
+
+}
+
+
+
 .rank {
 
-    margin:25px auto;
+    margin:15px auto;
 
     width:90px;
 
-    padding:15px;
+    padding:10px;
 
     border:1px solid rgba(200,167,90,0.5);
 
@@ -464,27 +435,21 @@ margin-top:20px;
 
 
 
-.abilities {
-
-    line-height:2;
-
-    color:#d9d6c8;
-
-}
-
-
-
 .passive {
 
-    margin-top:25px;
+    margin-top:15px;
 
-    padding-top:20px;
+    padding-top:15px;
 
-    border-top:1px solid rgba(200,167,90,0.3);
+    border-top:
+
+    1px solid rgba(200,167,90,0.3);
+
 
     font-size:14px;
 
 }
+
 
 
 .passive strong {
@@ -493,64 +458,75 @@ margin-top:20px;
 
 }
 
-.profile-box {
-
-    margin:20px 0;
-
-    padding:15px;
-
-}
 
 
-.passive {
 
-    margin-top:15px;
+/* =========================
+   EVENT
+========================= */
 
-    padding-top:15px;
 
-}
+.event-text {
 
-#profile .card {
-
-    gap:8px;
+    margin-bottom:35px;
 
 }
 
 
-#profile .card h1 {
 
-    margin:10px 0;
+.reward {
 
-}
-
-
-#profile .profile-box {
-
-    margin:15px 0;
-
-    padding:12px;
+    margin:30px;
 
 }
 
 
-#profile .rank {
 
-    margin:15px auto;
 
-    padding:10px;
+
+/* =========================
+   DUO SCREEN
+========================= */
+
+
+.duo-container {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
 
 }
 
 
-#profile .passive {
 
-    margin-top:10px;
+.champion {
 
-    padding-top:10px;
+    width:280px;
 
 }
+
+
+
+.vs {
+
+    font-size:40px;
+
+    color:#c8a75a;
+
+}
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 
 @media (max-height:800px) {
+
 
     .card {
 
@@ -571,5 +547,6 @@ margin-top:20px;
         font-size:14px;
 
     }
+
 
 }
