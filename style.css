@@ -116,7 +116,7 @@ body {
 
     position:absolute;
 
-    top:120px;
+    top:170px;
 
     z-index:10;
 
@@ -548,5 +548,35 @@ button:hover {
 
     }
 
+
+}
+
+/* =========================
+   ABILITIES
+========================= */
+
+
+#abilities .profile-box {
+
+    border-color:
+    rgba(200,167,90,0.5);
+
+}
+
+
+#abilities span {
+
+    color:#b9c8d8;
+
+    font-size:13px;
+
+}
+
+
+#abilities strong {
+
+    color:#f1d98a;
+
+    font-family:'Cinzel', serif;
 
 }
