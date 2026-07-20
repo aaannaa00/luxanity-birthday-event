@@ -29,11 +29,21 @@ function showEvent(){
 
     changeScreen(
         "profile",
-        "event"
+        "abilities"
     );
 
 }
 
+
+
+function showEventFinal(){
+
+    changeScreen(
+        "abilities",
+        "event"
+    );
+
+}
 
 
 
