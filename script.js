@@ -85,3 +85,12 @@ function revealChampion(){
     `;
 
 }
+
+function showAbilities(){
+
+    changeScreen(
+        "profile",
+        "abilities"
+    );
+
+}
