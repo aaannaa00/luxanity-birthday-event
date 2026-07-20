@@ -1,54 +1,127 @@
-body {
-    margin: 0;
-    height: 100vh;
-    background:
-    radial-gradient(circle at top, #173f6b, #050912 70%);
+* {
+    box-sizing: border-box;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+body {
+
+    margin:0;
+    height:100vh;
+
+    background:
+    radial-gradient(circle at center, #173f6b, #050912 75%);
+
+    overflow:hidden;
 
     font-family: Georgia, serif;
-    color: #e7dfc9;
 
-    overflow: hidden;
+    color:#e7dfc9;
+
 }
 
 
-.client {
-    text-align: center;
+/* magical particles */
+
+.particles {
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(#c8a75a 1px, transparent 1px);
+
+    background-size:80px 80px;
+
+    opacity:0.15;
+
 }
 
 
-.logo {
-    font-size: 18px;
-    letter-spacing: 5px;
-    color: #c8a75a;
-    margin-bottom: 80px;
+.screen {
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
 }
 
 
-.loading h1 {
-    font-size: 28px;
-    font-weight: normal;
+.hidden {
+
+    display:none;
+
 }
+
+
+
+.client-title {
+
+    position:absolute;
+
+    top:120px;
+
+    letter-spacing:8px;
+
+    color:#c8a75a;
+
+    font-size:18px;
+
+}
+
+
+.loading-box {
+
+    text-align:center;
+
+}
+
+
+
+.loading-box h1 {
+
+    font-weight:normal;
+
+    font-size:30px;
+
+}
+
 
 
 .bar {
-    width: 350px;
-    height: 12px;
-    border: 1px solid #c8a75a;
-    padding: 3px;
-    margin: 30px auto;
+
+    width:350px;
+
+    height:12px;
+
+    border:1px solid #c8a75a;
+
+    padding:3px;
+
+    margin:30px auto;
+
 }
+
 
 
 .progress {
-    height: 100%;
-    background: #c8a75a;
-    width: 0%;
-    animation: load 3s forwards;
+
+    height:100%;
+
+    background:#c8a75a;
+
+    width:0%;
+
+    animation:load 3s forwards;
+
 }
+
 
 
 @keyframes load {
@@ -56,5 +129,99 @@ body {
     to {
         width:100%;
     }
+
+}
+
+
+
+.card {
+
+    width:420px;
+
+    padding:45px;
+
+    text-align:center;
+
+
+    background:
+
+    rgba(5,9,18,0.75);
+
+
+    border:1px solid #c8a75a;
+
+
+    box-shadow:
+
+    0 0 40px rgba(200,167,90,0.25);
+
+}
+
+
+
+.small-title {
+
+    color:#c8a75a;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.card h1 {
+
+    font-size:50px;
+
+    margin:25px 0;
+
+}
+
+
+
+.status {
+
+    color:#62d26f;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.event-text {
+
+    margin-bottom:35px;
+
+}
+
+
+
+button {
+
+
+    background:#c8a75a;
+
+    border:none;
+
+    padding:15px 40px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    color:#050912;
+
+
+    transition:0.3s;
+
+}
+
+
+button:hover {
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px #c8a75a;
 
 }
