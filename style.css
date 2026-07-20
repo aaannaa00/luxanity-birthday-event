@@ -629,3 +629,85 @@ button:hover {
     drop-shadow(0 0 20px #c8a75a);
 
 }
+
+/* =========================
+   HEXTECH CURSOR
+========================= */
+
+
+body {
+
+    cursor: crosshair;
+
+}
+
+
+button,
+.profile-box {
+
+    cursor: pointer;
+
+}
+
+/* CUSTOM CURSOR */
+
+#cursor {
+
+    position:fixed;
+
+    width:24px;
+
+    height:24px;
+
+    border:
+
+    1px solid #c8a75a;
+
+
+    border-radius:50%;
+
+
+    pointer-events:none;
+
+
+    transform:translate(-50%,-50%);
+
+
+    box-shadow:
+
+    0 0 15px #c8a75a;
+
+
+    z-index:9999;
+
+}
+
+
+#cursor::after {
+
+    content:"";
+
+    position:absolute;
+
+
+    top:50%;
+
+    left:50%;
+
+
+    width:6px;
+
+    height:6px;
+
+
+    background:#62d6ff;
+
+
+    border-radius:50%;
+
+
+    transform:
+
+    translate(-50%,-50%);
+
+}
