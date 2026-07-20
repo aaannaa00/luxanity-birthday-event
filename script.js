@@ -200,7 +200,43 @@ function showLoot(){
 
 function openLoot(){
 
-    document.querySelector("#loot .card").innerHTML = `
+
+const card =
+document.querySelector("#loot .card");
+
+
+card.innerHTML = `
+
+
+<p class="gold">
+✦ UNLOCKING LOOT ✦
+</p>
+
+
+<h1>
+OPENING...
+</h1>
+
+
+<div class="profile-box">
+
+ANALYZING REWARD DATA...
+
+<br><br>
+
+████░░░░░░
+
+</div>
+
+
+`;
+
+
+
+setTimeout(()=>{
+
+
+card.innerHTML = `
 
 
 <p class="gold">
@@ -211,6 +247,7 @@ function openLoot(){
 <h1>
 MYTHIC LOOT
 </h1>
+
 
 
 <div class="profile-box">
@@ -229,25 +266,33 @@ MYTHIC LOOT
 
 ✦ Legendary Duo Buff
 
+
 </div>
 
 
 
-<p class="title">
+<div class="profile-box">
 
-Achievement unlocked:
+
+ACHIEVEMENT UNLOCKED
 
 <br>
 
-"Best Support Teammate"
+<strong>
+Best Support Teammate
+</strong>
 
-</p>
+
+</div>
 
 
 `;
 
-}
 
+},2500);
+
+
+}
 document.addEventListener(
 "mousemove",
 (e)=>{
