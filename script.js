@@ -217,3 +217,32 @@ e.clientY + "px";
 
 
 });
+
+const cursor =
+document.getElementById("cursor");
+
+
+document
+.querySelectorAll("button")
+.forEach(button=>{
+
+
+button.addEventListener(
+"mouseenter",
+()=>{
+
+cursor.classList.add("scan");
+
+});
+
+
+button.addEventListener(
+"mouseleave",
+()=>{
+
+cursor.classList.remove("scan");
+
+});
+
+
+});
