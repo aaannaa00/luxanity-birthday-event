@@ -156,7 +156,7 @@ body {
 
     width:420px;
 
-    padding:50px;
+    padding:35px;
 
 
     text-align:center;
@@ -184,6 +184,8 @@ body {
 
 
     position:relative;
+    max-height:85vh;
+    overflow-y:auto;
 
 }
 
@@ -486,5 +488,22 @@ margin-top:20px;
 .passive strong {
 
     color:#f1d98a;
+
+}
+
+.profile-box {
+
+    margin:20px 0;
+
+    padding:15px;
+
+}
+
+
+.passive {
+
+    margin-top:15px;
+
+    padding-top:15px;
 
 }
