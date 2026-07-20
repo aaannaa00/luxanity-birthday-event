@@ -79,13 +79,17 @@ body {
 
     position:absolute;
 
-    top:170px;
+    top:120px;
+
+    z-index:10;
 
     letter-spacing:8px;
 
     color:#c8a75a;
 
     font-size:18px;
+
+    font-family:'Cinzel', serif;
 
 }
 
@@ -199,9 +203,9 @@ body {
 
     font-family:'Cinzel', serif;
 
-    font-size:50px;
+    font-size:42px;
 
-    letter-spacing:4px;
+    letter-spacing:2px;
 
     margin:25px 0;
 
