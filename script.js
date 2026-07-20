@@ -12,7 +12,6 @@ function changeScreen(current, next){
 }
 
 
-
 setTimeout(()=>{
 
     changeScreen(
