@@ -990,3 +990,63 @@ text-shadow:
     font-size:13px;
 
 }
+
+/* ===========================
+   CHAMPION ABILITIES
+=========================== */
+
+.ability-title{
+
+font-family:'Cinzel', serif;
+
+font-size:18px;
+
+color:#f1d98a;
+
+margin-bottom:8px;
+
+letter-spacing:1px;
+
+}
+
+#abilities .profile-box{
+
+text-align:left;
+
+transition:.3s;
+
+}
+
+#abilities .profile-box:hover{
+
+transform:translateX(8px);
+
+border-color:#f1d98a;
+
+box-shadow:0 0 18px rgba(200,167,90,.25);
+
+}
+
+#abilities span{
+
+display:block;
+
+line-height:1.6;
+
+color:#cfd6df;
+
+}
+
+.ultimate{
+
+border:1px solid #f1d98a !important;
+
+background:linear-gradient(
+90deg,
+rgba(200,167,90,.10),
+rgba(20,40,70,.15)
+);
+
+box-shadow:0 0 18px rgba(200,167,90,.20);
+
+}
