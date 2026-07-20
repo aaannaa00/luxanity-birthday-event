@@ -61,28 +61,70 @@ function showDuo(){
 
 function revealChampion(){
 
-    document.querySelector(".hidden-card").innerHTML = `
-
-    <h2>
-    ANASTASIJA
-    </h2>
-
-    <p>
-    SECRET CHAMPION
-    </p>
+    document.querySelector("#duo .card").innerHTML = `
 
 
-    <div>
+<p class="gold">
+✦ CHAMPION REVEALED ✦
+</p>
 
-    ✓ Surprise
-    <br>
-    ✓ Support Buff
-    <br>
-    ✓ Memory Creation
 
-    </div>
+<h1>
+ANASTASIA
+</h1>
 
-    `;
+
+<p class="title">
+SECRET SUPPORT
+</p>
+
+
+
+<div class="profile-box">
+
+PASSIVE
+
+<br>
+
+<strong>
+Always has your back
+</strong>
+
+
+</div>
+
+
+
+<div class="profile-box">
+
+SPECIAL ABILITY
+
+<br>
+
+<strong>
+Legendary Duo
+</strong>
+
+
+</div>
+
+
+
+<div class="profile-box">
+
+SYNERGY
+
+<br>
+
+<strong>
+∞
+</strong>
+
+
+</div>
+
+
+`;
 
 }
 
