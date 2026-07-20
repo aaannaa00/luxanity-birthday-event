@@ -1144,3 +1144,66 @@ rgba(20,40,60,.18)
 );
 
 }
+
+/* =========================
+   SPELL ICONS
+========================= */
+
+
+.spell{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+
+.spell-icon{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:34px;
+
+height:34px;
+
+border:1px solid #c8a75a;
+
+background:
+
+linear-gradient(
+145deg,
+#162536,
+#050b13
+);
+
+color:#f1d98a;
+
+font-family:'Cinzel', serif;
+
+font-size:18px;
+
+font-weight:700;
+
+box-shadow:
+
+0 0 10px rgba(200,167,90,.25);
+
+}
+
+
+.ultimate-icon{
+
+border-color:#f1d98a;
+
+box-shadow:
+
+0 0 20px rgba(200,167,90,.5);
+
+}
