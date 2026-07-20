@@ -126,6 +126,10 @@ SYNERGY
 
 `;
 
+<button onclick="showLoot()">
+CLAIM REWARD
+</button>
+
 }
 
 function showAbilities(){
@@ -134,5 +138,66 @@ function showAbilities(){
         "profile",
         "abilities"
     );
+
+}
+
+function showLoot(){
+
+    changeScreen(
+        "duo",
+        "loot"
+    );
+
+}
+
+
+
+function openLoot(){
+
+    document.querySelector("#loot .card").innerHTML = `
+
+
+<p class="gold">
+✦ REWARD OBTAINED ✦
+</p>
+
+
+<h1>
+MYTHIC LOOT
+</h1>
+
+
+<div class="profile-box">
+
+🎮 Gaming Collection
+
+<br><br>
+
+✦ Hollow Knight Artifact
+
+<br>
+
+✦ Crash Bandicoot Memory
+
+<br>
+
+✦ Legendary Duo Buff
+
+</div>
+
+
+
+<p class="title">
+
+Achievement unlocked:
+
+<br>
+
+"Best Support Teammate"
+
+</p>
+
+
+`;
 
 }
