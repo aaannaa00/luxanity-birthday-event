@@ -1,21 +1,77 @@
-setTimeout(() => {
+function changeScreen(current, next){
 
     document
-    .getElementById("loadingScreen")
+    .getElementById(current)
     .classList.add("hidden");
 
 
     document
-    .getElementById("loginScreen")
+    .getElementById(next)
     .classList.remove("hidden");
 
-
-}, 3500);
-
+}
 
 
-function startEvent(){
 
-    alert("Birthday Event Loading...");
+setTimeout(()=>{
+
+    changeScreen(
+        "loading",
+        "profile"
+    );
+
+},3500);
+
+
+
+
+function showEvent(){
+
+    changeScreen(
+        "profile",
+        "event"
+    );
+
+}
+
+
+
+
+function showDuo(){
+
+    changeScreen(
+        "event",
+        "duo"
+    );
+
+}
+
+
+
+
+function revealChampion(){
+
+    document.querySelector(".hidden-card").innerHTML = `
+
+    <h2>
+    ANASTASIJA
+    </h2>
+
+    <p>
+    SECRET CHAMPION
+    </p>
+
+
+    <div>
+
+    ✓ Surprise
+    <br>
+    ✓ Support Buff
+    <br>
+    ✓ Memory Creation
+
+    </div>
+
+    `;
 
 }
