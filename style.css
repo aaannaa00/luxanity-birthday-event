@@ -184,8 +184,10 @@ body {
 
 
     position:relative;
-    max-height:85vh;
-    overflow-y:auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
 }
 
@@ -505,5 +507,69 @@ margin-top:20px;
     margin-top:15px;
 
     padding-top:15px;
+
+}
+
+#profile .card {
+
+    gap:8px;
+
+}
+
+
+#profile .card h1 {
+
+    margin:10px 0;
+
+}
+
+
+#profile .profile-box {
+
+    margin:15px 0;
+
+    padding:12px;
+
+}
+
+
+#profile .rank {
+
+    margin:15px auto;
+
+    padding:10px;
+
+}
+
+
+#profile .passive {
+
+    margin-top:10px;
+
+    padding-top:10px;
+
+}
+
+@media (max-height:800px) {
+
+    .card {
+
+        padding:25px;
+
+    }
+
+
+    .card h1 {
+
+        font-size:36px;
+
+    }
+
+
+    .profile-box {
+
+        font-size:14px;
+
+    }
 
 }
