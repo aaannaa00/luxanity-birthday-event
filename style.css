@@ -225,3 +225,70 @@ button:hover {
     box-shadow:0 0 20px #c8a75a;
 
 }
+
+.gold {
+
+color:#c8a75a;
+
+letter-spacing:3px;
+
+}
+
+
+.online {
+
+color:#62d26f;
+
+}
+
+
+.profile-box {
+
+margin:30px 0;
+
+padding:20px;
+
+border:1px solid #c8a75a;
+
+}
+
+
+.reward {
+
+margin:30px;
+
+}
+
+
+.duo-container {
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+
+.champion {
+
+width:280px;
+
+}
+
+
+.vs {
+
+font-size:40px;
+
+color:#c8a75a;
+
+}
+
+
+button {
+
+margin-top:20px;
+
+}
