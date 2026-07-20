@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Event 29.0</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxanity Birthday Event 29.0</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="client">
+<div class="particles"></div>
 
-    <div class="logo">
+<div class="screen" id="loadingScreen">
+
+    <div class="client-title">
         RIOT GAMES
     </div>
 
-    <div class="loading">
+    <div class="loading-box">
+
         <h1>Launching Client...</h1>
 
         <div class="bar">
             <div class="progress"></div>
         </div>
 
-        <p>Version 29.0</p>
+        <p>Birthday Event 29.0</p>
+
+    </div>
+
+</div>
+
+
+<div class="screen hidden" id="loginScreen">
+
+    <div class="card">
+
+        <p class="small-title">
+            WELCOME BACK, SUMMONER
+        </p>
+
+        <h1>LUXANITY</h1>
+
+        <div class="status">
+            ● ONLINE
+        </div>
+
+
+        <p class="event-text">
+            A limited-time event has appeared.
+        </p>
+
+
+        <button onclick="startEvent()">
+            ENTER EVENT
+        </button>
+
+
     </div>
 
 </div>
