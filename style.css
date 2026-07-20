@@ -631,7 +631,7 @@ button:hover {
 }
 
 /* =========================
-   HEXTECH CURSOR
+   HEXTECH CURSOR SYSTEM
 ========================= */
 
 
@@ -647,24 +647,26 @@ body {
 
     position:fixed;
 
-    width:28px;
+    width:30px;
 
-    height:28px;
+    height:30px;
 
     pointer-events:none;
 
     z-index:9999;
 
-
-    transform:translate(-2px,-2px)
+    transform:translate(-3px,-3px)
     rotate(-20deg);
 
+
+    transition:
+    transform 0.15s ease;
 
 }
 
 
 
-/* golden blade shape */
+/* golden pointer */
 
 #cursor::before {
 
@@ -684,7 +686,7 @@ body {
 
     linear-gradient(
     135deg,
-    #fff1a8,
+    #fff2a6,
     #c8a75a
     );
 
@@ -709,7 +711,7 @@ body {
 
 
 
-/* hextech energy core */
+/* energy crystal */
 
 .cursor-core {
 
@@ -737,17 +739,90 @@ body {
 
     0 0 10px #62d6ff,
 
-    0 0 20px rgba(98,214,255,0.8);
+    0 0 20px #62d6ff;
 
 
 }
 
 
 
-/* button interaction */
+/* =========================
+   SCAN MODE
+========================= */
 
-button:hover ~ #cursor {
 
-    transform:scale(1.3);
+#cursor.scan {
+
+
+    transform:
+
+    translate(-5px,-5px)
+
+    rotate(0deg)
+
+    scale(1.35);
+
+}
+
+
+
+#cursor.scan::before {
+
+
+    width:26px;
+
+    height:26px;
+
+
+    background:
+
+    transparent;
+
+
+    border:
+
+    2px solid #62d6ff;
+
+
+    clip-path:none;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 15px #62d6ff;
+
+}
+
+
+
+#cursor.scan::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:12px;
+
+    left:-5px;
+
+
+    width:40px;
+
+    height:2px;
+
+
+    background:#62d6ff;
+
+
+    box-shadow:
+
+    0 0 10px #62d6ff;
+
 
 }
