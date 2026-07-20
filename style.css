@@ -9,13 +9,27 @@ body {
     height:100vh;
 
     background:
-    radial-gradient(circle at center, #173f6b, #050912 75%);
+    radial-gradient(circle at center,
+    rgba(40,90,130,0.35),
+    transparent 35%),
+    radial-gradient(circle at bottom,
+    rgba(200,167,90,0.12),
+    transparent 45%),
+    linear-gradient(
+    135deg,
+    #02050b,
+    #081522 60%,
+    #02050b
+    );
+
 
     overflow:hidden;
 
-    font-family: Georgia, serif;
 
     color:#e7dfc9;
+
+
+    font-family:'Inter', sans-serif;
 
 }
 
@@ -65,7 +79,7 @@ body {
 
     position:absolute;
 
-    top:160px;
+    top:170px;
 
     letter-spacing:8px;
 
@@ -138,22 +152,34 @@ body {
 
     width:420px;
 
-    padding:45px;
+    padding:50px;
+
 
     text-align:center;
 
 
     background:
 
-    rgba(5,9,18,0.75);
+    linear-gradient(
+    145deg,
+    rgba(15,25,40,0.85),
+    rgba(3,8,15,0.9)
+    );
 
 
-    border:1px solid #c8a75a;
+    border:1px solid rgba(200,167,90,0.8);
 
 
     box-shadow:
 
-    0 0 40px rgba(200,167,90,0.25);
+    0 0 30px rgba(0,180,255,0.12),
+    inset 0 0 40px rgba(200,167,90,0.08);
+
+
+    backdrop-filter:blur(10px);
+
+
+    position:relative;
 
 }
 
@@ -171,9 +197,21 @@ body {
 
 .card h1 {
 
+    font-family:'Cinzel', serif;
+
     font-size:50px;
 
+    letter-spacing:4px;
+
     margin:25px 0;
+
+
+    color:#f1d98a;
+
+
+    text-shadow:
+
+    0 0 15px rgba(241,217,138,0.35);
 
 }
 
@@ -199,24 +237,58 @@ body {
 
 button {
 
+    background:
 
-    background:#c8a75a;
+    linear-gradient(
+    90deg,
+    #c8a75a,
+    #f1d98a
+    );
+
 
     border:none;
 
-    padding:15px 40px;
 
-    font-size:16px;
+    padding:16px 45px;
+
+
+    font-family:'Inter', sans-serif;
+
+
+    font-weight:600;
+
+
+    letter-spacing:2px;
+
 
     cursor:pointer;
 
-    color:#050912;
+
+    color:#07101c;
 
 
-    transition:0.3s;
+    transition:0.4s;
+
+
+    position:relative;
+
 
 }
 
+
+
+button:hover {
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 0 25px rgba(241,217,138,0.7);
+
+
+}
 
 button:hover {
 
@@ -290,5 +362,59 @@ color:#c8a75a;
 button {
 
 margin-top:20px;
+
+}
+
+.card::before,
+.card::after {
+
+    content:"✦";
+
+    position:absolute;
+
+    color:#c8a75a;
+
+    font-size:18px;
+
+}
+
+
+.card::before {
+
+    top:12px;
+    left:15px;
+
+}
+
+
+.card::after {
+
+    bottom:12px;
+    right:15px;
+
+}
+
+.particles {
+
+    animation:
+    drift 20s infinite linear;
+
+}
+
+
+@keyframes drift {
+
+    from {
+
+    transform:translateY(0);
+
+    }
+
+
+    to {
+
+    transform:translateY(-80px);
+
+    }
 
 }
