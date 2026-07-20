@@ -57,10 +57,51 @@ function showDuo(){
 
 
 
-
 function revealChampion(){
 
-    document.querySelector("#duo .card").innerHTML = `
+
+const card =
+document.querySelector("#duo .card");
+
+
+
+card.innerHTML = `
+
+
+<p class="gold">
+✦ SCANNING ✦
+</p>
+
+
+<h1>
+ANALYZING...
+</h1>
+
+
+<p class="title">
+Checking champion data
+</p>
+
+
+<div class="profile-box">
+
+LOADING SYNERGY...
+
+<br><br>
+
+██████░░░░
+
+</div>
+
+
+`;
+
+
+
+setTimeout(()=>{
+
+
+card.innerHTML = `
 
 
 <p class="gold">
@@ -68,9 +109,11 @@ function revealChampion(){
 </p>
 
 
+
 <h1>
 ANASTASIA
 </h1>
+
 
 
 <p class="title">
@@ -89,7 +132,6 @@ PASSIVE
 Always has your back
 </strong>
 
-
 </div>
 
 
@@ -103,7 +145,6 @@ SPECIAL ABILITY
 <strong>
 Legendary Duo
 </strong>
-
 
 </div>
 
@@ -119,17 +160,24 @@ SYNERGY
 ∞
 </strong>
 
-
 </div>
+
+
 
 <button onclick="showLoot()">
 CLAIM REWARD
 </button>
+
+
 `;
 
 
-}
 
+},2500);
+
+
+
+}
 function showAbilities(){
 
     changeScreen(
