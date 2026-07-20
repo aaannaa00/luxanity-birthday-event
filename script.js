@@ -122,12 +122,11 @@ SYNERGY
 
 </div>
 
-
-`;
-
 <button onclick="showLoot()">
 CLAIM REWARD
 </button>
+`;
+
 
 }
 
