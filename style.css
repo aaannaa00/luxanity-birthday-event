@@ -600,3 +600,32 @@ button:hover {
     font-size:13px;
 
 }
+
+/* =========================
+   LOOT CHEST
+========================= */
+
+
+.loot-card {
+
+    box-shadow:
+
+    0 0 50px rgba(200,167,90,0.35),
+
+    inset 0 0 50px rgba(0,180,255,0.15);
+
+}
+
+
+
+.chest {
+
+    font-size:80px;
+
+    margin:30px;
+
+    filter:
+
+    drop-shadow(0 0 20px #c8a75a);
+
+}
