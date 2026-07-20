@@ -957,3 +957,36 @@ text-shadow:
 
 
 }
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+
+#achievements .profile-box {
+
+    text-align:left;
+
+    transition:0.3s;
+
+}
+
+
+#achievements .profile-box:hover {
+
+    transform:translateX(8px);
+
+    box-shadow:
+    0 0 20px rgba(200,167,90,0.35);
+
+}
+
+
+
+#achievements span {
+
+    color:#b9c8d8;
+
+    font-size:13px;
+
+}
