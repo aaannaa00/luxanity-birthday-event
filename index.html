@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,17 +12,23 @@
 
 </head>
 
+
 <body>
+
 
 <div class="particles"></div>
 
-<div class="screen" id="loadingScreen">
+
+<!-- LOADING -->
+
+<section class="screen" id="loading">
 
     <div class="client-title">
         RIOT GAMES
     </div>
 
-    <div class="loading-box">
+
+    <div class="card">
 
         <h1>Launching Client...</h1>
 
@@ -32,40 +40,192 @@
 
     </div>
 
+</section>
+
+
+
+
+<!-- PROFILE -->
+
+<section class="screen hidden" id="profile">
+
+
+<div class="card">
+
+
+<p class="gold">
+WELCOME BACK, SUMMONER
+</p>
+
+
+<h1>LUXANITY</h1>
+
+
+<p class="online">
+● ONLINE
+</p>
+
+
+<div class="profile-box">
+
+ROLE:
+<br>
+<strong>SUPPORT MAIN</strong>
+
+<br><br>
+
+LEVEL:
+<br>
+<strong>29</strong>
+
 </div>
 
 
-<div class="screen hidden" id="loginScreen">
+<button onclick="showEvent()">
+ENTER EVENT
+</button>
 
-    <div class="card">
-
-        <p class="small-title">
-            WELCOME BACK, SUMMONER
-        </p>
-
-        <h1>LUXANITY</h1>
-
-        <div class="status">
-            ● ONLINE
-        </div>
-
-
-        <p class="event-text">
-            A limited-time event has appeared.
-        </p>
-
-
-        <button onclick="startEvent()">
-            ENTER EVENT
-        </button>
-
-
-    </div>
 
 </div>
+
+
+</section>
+
+
+
+
+
+<!-- EVENT -->
+
+<section class="screen hidden" id="event">
+
+
+<div class="card">
+
+
+<p class="gold">
+LIMITED TIME EVENT
+</p>
+
+
+<h1>
+Birthday Celebration
+</h1>
+
+
+<p>
+A legendary quest has appeared.
+</p>
+
+
+<div class="reward">
+
+Reward:
+<br>
+
+<strong>MYTHIC LOOT</strong>
+
+</div>
+
+
+<button onclick="showDuo()">
+ACCEPT QUEST
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- DUO -->
+
+<section class="screen hidden" id="duo">
+
+
+<div class="duo-container">
+
+
+<div class="card champion">
+
+
+<h2>
+LUXANITY
+</h2>
+
+
+<p>
+ROLE
+</p>
+
+
+<h3>
+SUPPORT
+</h3>
+
+
+<div>
+✓ Protect
+<br>
+✓ Assist
+<br>
+✓ Enable
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="vs">
+VS
+</div>
+
+
+
+
+<div class="card champion hidden-card">
+
+
+<h2>
+???
+</h2>
+
+
+<p>
+UNKNOWN CHAMPION
+</p>
+
+
+<button onclick="revealChampion()">
+SCAN
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
 
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
