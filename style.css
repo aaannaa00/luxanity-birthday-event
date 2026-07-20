@@ -422,3 +422,69 @@ margin-top:20px;
     }
 
 }
+
+.title {
+
+    color:#b9c8d8;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+}
+
+
+.rank {
+
+    margin:25px auto;
+
+    width:90px;
+
+    padding:15px;
+
+    border:1px solid rgba(200,167,90,0.5);
+
+    color:#c8a75a;
+
+}
+
+
+
+.rank strong {
+
+    font-size:35px;
+
+    font-family:'Cinzel', serif;
+
+}
+
+
+
+.abilities {
+
+    line-height:2;
+
+    color:#d9d6c8;
+
+}
+
+
+
+.passive {
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(200,167,90,0.3);
+
+    font-size:14px;
+
+}
+
+
+.passive strong {
+
+    color:#f1d98a;
+
+}
