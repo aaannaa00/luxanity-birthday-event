@@ -24,7 +24,7 @@ setTimeout(()=>{
 
 
 
-function showEvent(){
+function showAbilities(){
 
     changeScreen(
         "profile",
@@ -33,6 +33,14 @@ function showEvent(){
 
 }
 
+function showEvent(){
+
+    changeScreen(
+        "achievements",
+        "event"
+    );
+
+}
 
 
 function showEventFinal(){
@@ -178,11 +186,13 @@ CLAIM REWARD
 
 
 }
-function showAbilities(){
+
+
+function showAchievements(){
 
     changeScreen(
-        "profile",
-        "abilities"
+        "abilities",
+        "achievements"
     );
 
 }
