@@ -6,6 +6,7 @@
         "profile",
         "abilities",
         "achievements",
+        "patch-notes",
         "event",
         "duo",
         "loot"
