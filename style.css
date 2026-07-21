@@ -1262,3 +1262,80 @@ box-shadow:
     margin-top:0;
 
 }
+
+/*=================================
+ACHIEVEMENTS
+=================================*/
+
+.achievement-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:12px;
+
+margin:20px 0;
+
+}
+
+.achievement-card{
+
+padding:14px;
+
+border-radius:8px;
+
+background:rgba(10,20,35,.55);
+
+border:1px solid rgba(200,167,90,.25);
+
+opacity:0;
+
+transform:translateY(20px) scale(.96);
+
+transition:
+opacity .5s,
+transform .5s,
+box-shadow .35s;
+
+}
+
+.achievement-card.show{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+.achievement-card h3{
+
+margin:0 0 8px;
+
+font-size:16px;
+
+font-family:'Cinzel',serif;
+
+}
+
+.achievement-card p{
+
+margin:0 0 10px;
+
+font-size:13px;
+
+line-height:1.4;
+
+color:#d5dde5;
+
+}
+
+.achievement-card span{
+
+font-size:11px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+}
