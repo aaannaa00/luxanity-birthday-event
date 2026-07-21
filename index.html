@@ -1,425 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxanity Birthday Event 29.0</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Luxanity Birthday Event 29.0</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
-
 <body>
-
-<div id="cursor">
-    <div class="cursor-core"></div>
-</div>
-    
-<div id="cursor-particles"></div>
-    
-<div class="particles"></div>
-
-
-<!-- LOADING -->
-
-<section class="screen" id="loading">
-
-    <div class="client-title">
-        RIOT GAMES
+    <div id="cursor" aria-hidden="true">
+        <div class="cursor-core"></div>
     </div>
 
+    <div id="cursor-particles" aria-hidden="true"></div>
+    <div class="particles" aria-hidden="true"></div>
 
-    <div class="card">
+    <!-- LOADING -->
+    <section class="screen" id="loading">
+        <div class="client-title">RIOT GAMES</div>
 
-        <h1>Launching Client...</h1>
+        <div class="card">
+            <p class="eyebrow">BIRTHDAY EVENT 29.0</p>
+            <h1>Launching Client...</h1>
 
-        <div class="bar">
-            <div class="progress"></div>
+            <div class="bar" aria-hidden="true">
+                <div class="progress"></div>
+            </div>
+
+            <p class="muted">Preparing player profile</p>
         </div>
-
-        <p>Birthday Event 29.0</p>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- PROFILE -->
-
-<section class="screen hidden" id="profile">
-
-
-<div class="card">
-
-
-<p class="gold">
-✦ PLAYER PROFILE ✦
-</p>
-
-
-<h1>
-LUXANITY
-</h1>
-
-
-<p class="title">
-THE SUPPORT MAIN
-</p>
-
-
-
-<div class="rank">
-
-LEVEL
-
-<br>
-
-<strong>
-29
-</strong>
-
-</div>
-
-
-
-
-<div class="profile-box">
-
-
-<p>
-ROLE
-</p>
-
-
-<strong>
-SUPPORT
-</strong>
-
-
-</div>
-
-<button onclick="showAbilities()">
-ENTER EVENT
-</button>
-
-
-</div>
-
-
-</section>
-
-
-<!-- ABILITIES -->
-
-<section class="screen hidden" id="abilities">
-
-<div class="card">
-
-<p class="gold">
-✦ CHAMPION OVERVIEW ✦
-</p>
-
-<h1>
-SUPPORT KIT
-</h1>
-
-<div class="abilities-grid">
-
-<div class="ability-card">
-
-<div class="spell">
-<span class="spell-icon">P</span>
-PASSIVE
-</div>
-
-<h3>Support Instinct</h3>
-
-<p>Always stands beside his allies.</p>
-
-</div>
-
-<div class="ability-card">
-
-
-
-<div class="spell">
-<span class="spell-icon">Q</span>
-VISION CONTROL
-</div>
-
-
-<p>Reveals the path before anyone else.</p>
-
-</div>
-
-<div class="ability-card">
-
-<div class="spell">
-    <span class="spell-icon">W</span>
-    TEAM BOOST
-</div>    
-
-<p>Empowers allies through perfect coordination.</p>
-
-</div>
-
-<div class="ability-card">
-
-<div class="spell">
-    <span class="spell-icon">E</span>
-    NEVER GIVE UP
-</div>
-
-<p>The comeback is always possible.</p>
-
-</div>
-
-<div class="ability-card ultimate-card">
-
-<div class="spell">
-    <span class="spell-icon ultimate-icon">R</span>
-    ULTIMATE
-</div>
-
-<h3>Legendary Duo</h3>
-
-<p>Unlocked only with the Secret Champion.</p>
-
-</div>
-
-</div>
-
-<button onclick="showAchievements()">
-CONTINUE
-</button>
-
-</div>
-
-
-</section>
-
-<!-- ACHIEVEMENTS -->
-
-<section class="screen hidden" id="achievements">
-
-<div class="card">
-
-<p class="gold">
-✦ PLAYER COLLECTION ✦
-</p>
-
-<h1>
-ACHIEVEMENTS
-</h1>
-
-<div class="achievement-grid">
-
-<div class="achievement-card common">
-<h3>🏆 SUPPORT MAIN</h3>
-<p>Always puts the team first.</p>
-<span>COMMON</span>
-</div>
-
-<div class="achievement-card rare">
-<h3>👁 VISION MASTER</h3>
-<p>The map is never truly dark.</p>
-<span>RARE</span>
-</div>
-
-<div class="achievement-card epic">
-<h3>🗺 MAP ARCHITECT</h3>
-<p>Built worlds where others created memories.</p>
-<span>EPIC</span>
-</div>
-
-<div class="achievement-card legendary">
-<h3>🪲 HALLownest Explorer</h3>
-<p>Every challenge conquered. Every secret discovered.</p>
-<span>LEGENDARY</span>
-</div>
-
-<div class="achievement-card legacy">
-<h3>💙 RIFT VETERAN</h3>
-<p>Countless battles. Endless memories.</p>
-<span>LEGACY</span>
-</div>
-
-<div class="achievement-card mythic">
-<h3>🤝 LEGENDARY DUO</h3>
-<p>Hidden synergy level: ∞</p>
-<span>MYTHIC</span>
-</div>
-
-</div>
-
-<button onclick="showEvent()">
-CONTINUE
-</button>
-
-</div>
-
-</section>
-    
-<!-- EVENT -->
-
-<section class="screen hidden" id="event">
-
-
-<div class="card">
-
-
-<p class="gold">
-LIMITED TIME EVENT
-</p>
-
-
-<h1>
-Birthday Celebration
-</h1>
-
-
-<p>
-A legendary quest has appeared.
-</p>
-
-
-<div class="reward">
-
-Reward:
-<br>
-
-<strong>MYTHIC LOOT</strong>
-
-</div>
-
-
-<button onclick="showDuo()">
-ACCEPT QUEST
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- SECRET CHAMPION -->
-
-<section class="screen hidden" id="duo">
-
-
-<div class="card">
-
-
-<p class="gold">
-✦ SECRET CHAMPION UNLOCKED ✦
-</p>
-
-
-
-<h1>
-???
-</h1>
-
-
-
-<p class="title">
-UNKNOWN SUPPORT
-</p>
-
-
-
-<div class="profile-box">
-
-
-<strong>
-NEW CHAMPION DETECTED
-</strong>
-
-
-<br><br>
-
-
-<span>
-Scan required to reveal identity
-</span>
-
-
-</div>
-
-
-
-<button onclick="revealChampion()">
-SCAN
-</button>
-
-
-
-</div>
-
-
-</section>
-
-
-<!-- LOOT CHEST -->
-
-<section class="screen hidden" id="loot">
-
-
-<div class="card loot-card">
-
-
-<p class="gold">
-✦ MYTHIC LOOT DISCOVERED ✦
-</p>
-
-
-<h1>
-LEGENDARY CHEST
-</h1>
-
-
-
-<div class="chest">
-
-✦
-
-</div>
-
-
-
-<p>
-A special reward has been unlocked.
-</p>
-
-
-
-<button onclick="openLoot()">
-OPEN CHEST
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<script src="script.js"></script>
-
-
+    </section>
+
+    <!-- PROFILE -->
+    <section class="screen hidden" id="profile">
+        <div class="card">
+            <p class="eyebrow">✦ PLAYER PROFILE ✦</p>
+
+            <h1>LUXANITY</h1>
+            <p class="title">THE SUPPORT MAIN</p>
+
+            <div class="rank">
+                <span>LEVEL</span>
+                <strong>29</strong>
+            </div>
+
+            <div class="profile-box">
+                <span class="label">ROLE</span>
+                <strong>SUPPORT</strong>
+            </div>
+
+            <button type="button" data-next="abilities">ENTER EVENT</button>
+        </div>
+    </section>
+
+    <!-- ABILITIES -->
+    <section class="screen hidden" id="abilities">
+        <div class="card card-wide">
+            <p class="eyebrow">✦ CHAMPION OVERVIEW ✦</p>
+            <h1>SUPPORT KIT</h1>
+
+            <div class="abilities-grid">
+                <article class="ability-card">
+                    <div class="spell">
+                        <span class="spell-icon">P</span>
+                        <span>PASSIVE</span>
+                    </div>
+                    <h3>Support Instinct</h3>
+                    <p>Always stands beside his allies.</p>
+                </article>
+
+                <article class="ability-card">
+                    <div class="spell">
+                        <span class="spell-icon">Q</span>
+                        <span>VISION CONTROL</span>
+                    </div>
+                    <h3>Vision Control</h3>
+                    <p>Reveals the path before anyone else.</p>
+                </article>
+
+                <article class="ability-card">
+                    <div class="spell">
+                        <span class="spell-icon">W</span>
+                        <span>TEAM BOOST</span>
+                    </div>
+                    <h3>Team Boost</h3>
+                    <p>Empowers allies through perfect coordination.</p>
+                </article>
+
+                <article class="ability-card">
+                    <div class="spell">
+                        <span class="spell-icon">E</span>
+                        <span>NEVER GIVE UP</span>
+                    </div>
+                    <h3>Never Give Up</h3>
+                    <p>The comeback is always possible.</p>
+                </article>
+
+                <article class="ability-card ultimate-card">
+                    <div class="spell">
+                        <span class="spell-icon ultimate-icon">R</span>
+                        <span>ULTIMATE</span>
+                    </div>
+                    <h3>Legendary Duo</h3>
+                    <p>Unlocked only with the Secret Champion.</p>
+                </article>
+            </div>
+
+            <button type="button" data-next="achievements">CONTINUE</button>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="screen hidden" id="achievements">
+        <div class="card card-wide achievements-card">
+            <p class="eyebrow">✦ PLAYER COLLECTION ✦</p>
+            <h1>ACHIEVEMENTS</h1>
+            <p class="flip-hint">Hover or tap a card to reveal its description.</p>
+
+            <div class="achievement-grid">
+                <article class="achievement-card common" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">🏆</span>
+                            <h3>SUPPORT MAIN</h3>
+                            <span class="rarity">COMMON</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>SUPPORT MAIN</h3>
+                            <p>Always puts the team first.</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="achievement-card rare" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">👁</span>
+                            <h3>VISION MASTER</h3>
+                            <span class="rarity">RARE</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>VISION MASTER</h3>
+                            <p>The map is never truly dark.</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="achievement-card epic" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">🗺</span>
+                            <h3>MAP ARCHITECT</h3>
+                            <span class="rarity">EPIC</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>MAP ARCHITECT</h3>
+                            <p>Built worlds where others created memories.</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="achievement-card legendary" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">🪲</span>
+                            <h3>HALLownest EXPLORER</h3>
+                            <span class="rarity">LEGENDARY</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>HALLownest EXPLORER</h3>
+                            <p>Every challenge conquered. Every secret discovered.</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="achievement-card legacy" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">💙</span>
+                            <h3>RIFT VETERAN</h3>
+                            <span class="rarity">LEGACY</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>RIFT VETERAN</h3>
+                            <p>Countless battles. Endless memories.</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="achievement-card mythic" tabindex="0">
+                    <div class="achievement-inner">
+                        <div class="achievement-face achievement-front">
+                            <span class="achievement-symbol">🤝</span>
+                            <h3>LEGENDARY DUO</h3>
+                            <span class="rarity">MYTHIC</span>
+                        </div>
+                        <div class="achievement-face achievement-back">
+                            <h3>LEGENDARY DUO</h3>
+                            <p>Hidden synergy level: ∞</p>
+                            <span class="status">✓ UNLOCKED</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button type="button" data-next="event">CONTINUE</button>
+        </div>
+    </section>
+
+    <!-- EVENT -->
+    <section class="screen hidden" id="event">
+        <div class="card">
+            <p class="eyebrow">LIMITED TIME EVENT</p>
+            <h1>Birthday Celebration</h1>
+            <p>A legendary quest has appeared.</p>
+
+            <div class="reward">
+                <span class="label">REWARD</span>
+                <strong>MYTHIC LOOT</strong>
+            </div>
+
+            <button type="button" data-next="duo">ACCEPT QUEST</button>
+        </div>
+    </section>
+
+    <!-- SECRET CHAMPION -->
+    <section class="screen hidden" id="duo">
+        <div class="card">
+            <p class="eyebrow">✦ SECRET CHAMPION UNLOCKED ✦</p>
+            <h1>???</h1>
+            <p class="title">UNKNOWN SUPPORT</p>
+
+            <div class="profile-box">
+                <strong>NEW CHAMPION DETECTED</strong>
+                <span>Scan required to reveal identity</span>
+            </div>
+
+            <button type="button" id="scan-button">SCAN</button>
+        </div>
+    </section>
+
+    <!-- LOOT -->
+    <section class="screen hidden" id="loot">
+        <div class="card loot-card">
+            <p class="eyebrow">✦ MYTHIC LOOT DISCOVERED ✦</p>
+            <h1>LEGENDARY CHEST</h1>
+
+            <div class="chest" aria-hidden="true">
+                <span class="chest-core">✦</span>
+            </div>
+
+            <p>A special reward has been unlocked.</p>
+
+            <button type="button" id="open-loot-button">OPEN CHEST</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
