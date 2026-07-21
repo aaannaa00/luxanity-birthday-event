@@ -1040,3 +1040,115 @@ button:active {
     }
 
 }
+
+/* ==========================================
+   PATCH NOTES — THREE COLUMN LAYOUT
+========================================== */
+
+.patch-card-columns {
+    width: min(1180px, 94vw);
+    max-width: 1180px;
+    padding: 28px 36px;
+}
+
+.patch-card-columns .patch-section {
+    margin-bottom: 22px;
+}
+
+.patch-card-columns .patch-section h2 {
+    margin-bottom: 18px;
+    font-size: 1.75rem;
+}
+
+.patch-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.patch-column {
+    min-width: 0;
+}
+
+.patch-column h3 {
+    margin: 0 0 14px;
+    font-size: 1.1rem;
+}
+
+.patch-card-columns .patch-item {
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.patch-card-columns .patch-item h4 {
+    margin-bottom: 7px;
+    font-size: 0.95rem;
+}
+
+.patch-card-columns .patch-item p {
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+.patch-card-columns button {
+    margin-top: 8px;
+}
+
+/* Different accent color for each column */
+
+.patch-column:nth-child(1) .patch-item {
+    border-left-color: #56d364;
+}
+
+.patch-column:nth-child(2) .patch-item {
+    border-left-color: #ff6b6b;
+}
+
+.patch-column:nth-child(3) .patch-item {
+    border-left-color: #ffc857;
+}
+
+/* Medium screens */
+
+@media (max-width: 1050px) {
+
+    .patch-card-columns {
+        width: min(960px, 94vw);
+        padding: 24px 28px;
+    }
+
+    .patch-columns {
+        gap: 14px;
+    }
+
+    .patch-card-columns .patch-item {
+        padding: 12px 14px;
+    }
+
+    .patch-card-columns .patch-item p {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Tablets and phones */
+
+@media (max-width: 760px) {
+
+    .patch-card-columns {
+        width: 92vw;
+        max-height: 88vh;
+        overflow-y: auto;
+    }
+
+    .patch-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .patch-card-columns .patch-item p {
+        font-size: 0.9rem;
+    }
+
+}
