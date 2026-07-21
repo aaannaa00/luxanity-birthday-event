@@ -195,6 +195,10 @@ function showAchievements(){
         "achievements"
     );
 
+    setTimeout(()=>{
+        animateAchievements();
+    },150);
+
 }
 
 function showLoot(){
@@ -389,3 +393,27 @@ particle.remove();
 
 
 });
+
+function animateAchievements(){
+
+const cards =
+document.querySelectorAll(".achievement-card");
+
+cards.forEach(card=>{
+
+card.classList.remove("show");
+
+});
+
+cards.forEach((card,index)=>{
+
+setTimeout(()=>{
+
+card.classList.add("show");
+
+},250*index);
+
+});
+
+}
+
