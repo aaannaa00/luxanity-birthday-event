@@ -1157,3 +1157,64 @@ button:active {
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
+
+/* ==========================================
+   PATCH NOTES 2 — BUG FIX GRID
+========================================== */
+
+.patch-card-compact {
+    width: min(980px, 90vw);
+    max-width: 980px;
+    padding: 24px 30px;
+}
+
+.patch-card-compact .patch-section {
+    margin-bottom: 20px;
+}
+
+.patch-card-compact .patch-section h2 {
+    margin-bottom: 22px;
+}
+
+.patch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+}
+
+.patch-grid .patch-item {
+    margin-bottom: 0;
+    padding: 16px;
+    min-width: 0;
+}
+
+.patch-grid .patch-item h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.patch-grid .patch-item p {
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+.bug-item {
+    border-left-color: #5bc0de;
+}
+
+.patch-card-compact button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+    .patch-card-compact {
+        max-height: 88vh;
+        overflow-y: auto;
+    }
+
+    .patch-grid {
+        grid-template-columns: 1fr;
+    }
+}
