@@ -1248,51 +1248,43 @@ button:active {
 }
 
 
-.thanks-card {
-    width: min(650px, 90vw);
-    max-height: 90vh;
-    padding: 32px;
-    text-align: center;
-    overflow: hidden;
+.thanks-card{
+    width:min(640px,90vw);
+    padding:34px;
+    text-align:center;
 }
 
-.thanks-card h1 {
-    margin-bottom: 6px;
+.thanks-note p{
+    margin:0 0 18px;
+    line-height:1.6;
 }
 
-.thanks-card .title {
-    margin-bottom: 18px;
+.feature-added{
+    display:block;
+    margin-top:8px;
+    font-size:1.45rem;
+    color:var(--gold);
 }
 
-.thanks-card .profile-box {
-    margin-top: 14px;
+.thanks-message p{
+    margin:10px 0;
+    line-height:1.6;
+    color:#d7c9a2;
 }
 
-.thanks-note p {
-    margin: 0 0 14px;
-    line-height: 1.5;
-    color: #d7c9a2;
+.final-status{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-.feature-added {
-    display: block;
-    margin-top: 6px;
-    font-size: 1.35rem;
+.final-status strong{
+    font-size:1.05rem;
 }
 
-.thanks-text {
-    margin: 0;
-    line-height: 1.55;
-    color: #d7c9a2;
-    font-size: 0.95rem;
-}
-
-.thanks-status-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-}
-
-.thanks-status-grid .profile-box {
-    min-width: 0;
+.ending-text{
+    margin-top:22px;
+    color:#b8c3d8;
+    font-style:italic;
+    letter-spacing:1px;
 }
