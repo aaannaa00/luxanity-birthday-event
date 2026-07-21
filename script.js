@@ -6,6 +6,7 @@
         "profile",
         "abilities",
         "achievements",
+        "patch-intro",
         "patch-notes-1",
         "patch-notes-2",
         "patch-notes-3",
