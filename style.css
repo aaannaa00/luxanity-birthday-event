@@ -876,121 +876,167 @@ button:active {
     }
 }
 
-/* ===========================
+/* ==========================================
    PATCH NOTES
-=========================== */
+========================================== */
 
 .patch-card {
     max-width: 900px;
     text-align: left;
 }
 
+.patch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.patch-page {
+    color: rgba(212, 175, 55, 0.8);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.patch-card h1 {
+    margin-bottom: 18px;
+}
+
 .patch-card .subtitle {
-    margin-bottom: 35px;
-    opacity: 0.8;
-    line-height: 1.7;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.82);
 }
 
 .patch-section {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .patch-section h2 {
     color: #d4af37;
-    margin-bottom: 22px;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    padding-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(212,175,55,.25);
 }
 
 .patch-section h3 {
-    margin: 25px 0 18px;
-    font-size: 1.15rem;
-    letter-spacing: 1px;
+    margin: 28px 0 18px;
+    font-size: 1.25rem;
+    letter-spacing: .5px;
 }
 
 .buff {
-    color: #4caf50;
+    color: #56d364;
 }
 
 .nerf {
-    color: #d9534f;
+    color: #ff6b6b;
 }
 
 .adjustment {
-    color: #f0ad4e;
+    color: #ffc857;
 }
 
 .patch-item {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(212,175,55,.12);
     border-left: 4px solid #d4af37;
-    padding: 16px 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    transition: all .25s ease;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    transition: .25s ease;
 }
 
 .patch-item:hover {
-    background: rgba(255,255,255,0.07);
-    transform: translateX(6px);
+    transform: translateX(5px);
+    border-color: rgba(212,175,55,.4);
+    background: rgba(255,255,255,.055);
+    box-shadow: 0 0 20px rgba(212,175,55,.08);
 }
 
 .patch-item h4 {
+    margin: 0 0 10px;
     color: #f5e6b3;
-    margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .patch-item p {
     margin: 0;
-    line-height: 1.7;
-    color: #d7d7d7;
+    color: rgba(255,255,255,.82);
+    line-height: 1.75;
 }
 
 .patch-list {
     margin: 0;
-    padding-left: 22px;
+    padding-left: 20px;
 }
 
 .patch-list li {
-    margin-bottom: 14px;
-    line-height: 1.7;
-    color: #d7d7d7;
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.85);
+}
+
+.patch-list li:last-child {
+    margin-bottom: 0;
 }
 
 .developer-note {
     margin-top: 50px;
     padding: 25px;
-    border-top: 1px solid rgba(212,175,55,.3);
+    border: 1px solid rgba(212,175,55,.2);
+    background: rgba(212,175,55,.04);
+    border-radius: 12px;
     text-align: center;
-    font-style: italic;
-    opacity: .9;
 }
 
 .developer-note h3 {
     color: #d4af37;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .developer-note p {
-    line-height: 1.8;
+    line-height: 1.9;
+    color: rgba(255,255,255,.85);
 }
 
-@media (max-width: 768px) {
+.developer-note strong {
+    color: #f5e6b3;
+}
 
-    .patch-card {
-        padding: 25px;
+.patch-card button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 768px){
+
+    .patch-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
     }
 
-    .patch-item {
-        padding: 14px 16px;
+    .patch-page{
+        font-size:.8rem;
     }
 
-    .patch-section h2 {
-        font-size: 1.4rem;
+    .patch-section h2{
+        font-size:1.55rem;
     }
 
-    .patch-section h3 {
-        font-size: 1.05rem;
+    .patch-section h3{
+        font-size:1.1rem;
+    }
+
+    .patch-item{
+        padding:16px;
     }
 
 }
