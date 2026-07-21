@@ -1288,3 +1288,41 @@ button:active {
     font-style:italic;
     letter-spacing:1px;
 }
+
+
+#thanks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+#thanks .thanks-card {
+    width: min(900px, 92vw);
+    height: calc(100vh - 48px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px 55px;
+    box-sizing: border-box;
+
+    overflow-y: auto;
+}
+
+#thanks h1 {
+    margin: 10px 0;
+}
+
+#thanks .title {
+    margin-bottom: 20px;
+}
+
+#thanks .profile-box {
+    margin-top: 16px;
+}
+
+#thanks .ending-text {
+    margin-top: 18px;
+}
