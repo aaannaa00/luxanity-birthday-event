@@ -1046,9 +1046,9 @@ button:active {
 ========================================== */
 
 .patch-card-columns {
-    width: min(1180px, 94vw);
-    max-width: 1180px;
-    padding: 28px 36px;
+    width: min(1120px, 92vw);
+    max-width: 1120px;
+    padding: 24px 30px;
 }
 
 .patch-card-columns .patch-section {
@@ -1063,7 +1063,7 @@ button:active {
 .patch-columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 14px;
     align-items: start;
 }
 
@@ -1077,7 +1077,7 @@ button:active {
 }
 
 .patch-card-columns .patch-item {
-    padding: 14px 16px;
+    padding: 12px 14px;
     margin-bottom: 12px;
     border-radius: 10px;
 }
@@ -1088,12 +1088,12 @@ button:active {
 }
 
 .patch-card-columns .patch-item p {
-    font-size: 0.86rem;
-    line-height: 1.55;
+    font-size:.82rem;
+    line-height:1.45;
 }
 
 .patch-card-columns button {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 /* Different accent color for each column */
@@ -1151,4 +1151,9 @@ button:active {
         font-size: 0.9rem;
     }
 
+}
+.patch-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
