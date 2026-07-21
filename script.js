@@ -12,7 +12,8 @@
         "patch-notes-3",
         "event",
         "duo",
-        "loot"
+        "loot",
+        "thanks"
     ];
 
     const cursor = document.getElementById("cursor");
@@ -315,8 +316,14 @@ function changeScreen(nextId) {
                     </strong>
 
                 </div>
+                <button 
+                    type="button"
+                    data-next="thanks">
+                    CONTINUE
+               </button>
 
             `;
+            bindInteractiveElements(card);
 
         }, 2500);
 
