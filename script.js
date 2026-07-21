@@ -1,419 +1,447 @@
-function changeScreen(current, next){
+(() => {
+    "use strict";
 
-    document
-    .getElementById(current)
-    .classList.add("hidden");
-
-
-    document
-    .getElementById(next)
-    .classList.remove("hidden");
-
-}
-
-
-setTimeout(()=>{
-
-    changeScreen(
+    const SCREEN_IDS = [
         "loading",
-        "profile"
-    );
-
-},3500);
-
-
-
-
-function showAbilities(){
-
-    changeScreen(
         "profile",
-        "abilities"
-    );
-
-}
-
-function showEvent(){
-
-    changeScreen(
+        "abilities",
         "achievements",
-        "event"
-    );
-
-}
-
-
-function showEventFinal(){
-
-    changeScreen(
-        "abilities",
-        "event"
-    );
-
-}
-
-
-
-function showDuo(){
-
-    changeScreen(
         "event",
-        "duo"
-    );
-
-}
-
-
-
-function revealChampion(){
-
-
-const card =
-document.querySelector("#duo .card");
-
-
-
-card.innerHTML = `
-
-
-<p class="gold">
-✦ SCANNING ✦
-</p>
-
-
-<h1>
-ANALYZING...
-</h1>
-
-
-<p class="title">
-Checking champion data
-</p>
-
-
-<div class="profile-box">
-
-LOADING SYNERGY...
-
-<br><br>
-
-██████░░░░
-
-</div>
-
-
-`;
-
-
-
-setTimeout(()=>{
-
-
-card.innerHTML = `
-
-
-<p class="gold">
-✦ CHAMPION REVEALED ✦
-</p>
-
-
-
-<h1>
-ANASTASIA
-</h1>
-
-
-
-<p class="title">
-SECRET SUPPORT
-</p>
-
-
-
-<div class="profile-box">
-
-PASSIVE
-
-<br>
-
-<strong>
-Always has your back
-</strong>
-
-</div>
-
-
-
-<div class="profile-box">
-
-SPECIAL ABILITY
-
-<br>
-
-<strong>
-Legendary Duo
-</strong>
-
-</div>
-
-
-
-<div class="profile-box">
-
-SYNERGY
-
-<br>
-
-<strong>
-∞
-</strong>
-
-</div>
-
-
-
-<button onclick="showLoot()">
-CLAIM REWARD
-</button>
-
-
-`;
-
-
-
-},2500);
-
-
-
-}
-
-
-function showAchievements(){
-
-    changeScreen(
-        "abilities",
-        "achievements"
-    );
-
-    setTimeout(()=>{
-        animateAchievements();
-    },150);
-
-}
-
-function showLoot(){
-
-    changeScreen(
         "duo",
         "loot"
+    ];
+
+    const cursor = document.getElementById("cursor");
+    const particleContainer = document.getElementById("cursor-particles");
+
+    let lastParticleTime = 0;
+
+    function getScreen(id) {
+        return document.getElementById(id);
+    }
+
+    function changeScreen(nextId) {
+
+        if (!SCREEN_IDS.includes(nextId)) {
+            console.error(`Unknown screen: ${nextId}`);
+            return;
+        }
+
+        SCREEN_IDS.forEach(id => {
+            getScreen(id)?.classList.toggle(
+                "hidden",
+                id !== nextId
+            );
+        });
+
+        if (nextId === "achievements") {
+            setTimeout(
+                animateAchievements,
+                120
+            );
+        }
+    }
+
+    function animateAchievements() {
+
+        const cards =
+            document.querySelectorAll(".achievement-card");
+
+        cards.forEach(card => {
+            card.classList.remove(
+                "show",
+                "is-flipped"
+            );
+        });
+
+        cards.forEach((card, index) => {
+
+            setTimeout(() => {
+
+                card.classList.add("show");
+
+            }, index * 150);
+
+        });
+
+    }
+
+    function revealChampion() {
+
+        const card =
+            document.querySelector("#duo .card");
+
+        if (!card) return;
+
+        card.innerHTML = `
+            <p class="eyebrow">
+                ✦ SCANNING ✦
+            </p>
+
+            <h1>
+                ANALYZING...
+            </h1>
+
+            <p class="title">
+                CHECKING CHAMPION DATA
+            </p>
+
+            <div class="profile-box scan-progress">
+
+                <span>
+                    LOADING SYNERGY...
+                </span>
+
+                <div class="scan-bar">
+
+                    <div class="scan-fill"></div>
+
+                </div>
+
+            </div>
+        `;
+
+        setTimeout(() => {
+
+            card.innerHTML = `
+
+                <p class="eyebrow">
+                    ✦ CHAMPION REVEALED ✦
+                </p>
+
+                <h1>
+                    ANASTASIA
+                </h1>
+
+                <p class="title">
+                    SECRET SUPPORT
+                </p>
+
+                <div class="profile-box">
+
+                    <span class="label">
+                        PASSIVE
+                    </span>
+
+                    <strong>
+                        Always Has Your Back
+                    </strong>
+
+                </div>
+
+                <div class="profile-box">
+
+                    <span class="label">
+                        SPECIAL ABILITY
+                    </span>
+
+                    <strong>
+                        Legendary Duo
+                    </strong>
+
+                </div>
+
+                <div class="profile-box">
+
+                    <span class="label">
+                        SYNERGY
+                    </span>
+
+                    <strong>
+                        ∞
+                    </strong>
+
+                </div>
+
+                <button
+                    type="button"
+                    data-next="loot">
+
+                    CLAIM REWARD
+
+                </button>
+
+            `;
+
+            bindInteractiveElements(card);
+
+        }, 2500);
+
+    }
+
+    function openLoot() {
+
+        const card =
+            document.querySelector("#loot .card");
+
+        if (!card) return;
+
+        card.innerHTML = `
+
+            <p class="eyebrow">
+                ✦ UNLOCKING LOOT ✦
+            </p>
+
+            <h1>
+                OPENING...
+            </h1>
+
+            <div class="profile-box scan-progress">
+
+                <span>
+                    ANALYZING REWARD DATA...
+                </span>
+
+                <div class="scan-bar">
+
+                    <div class="scan-fill"></div>
+
+                </div>
+
+            </div>
+
+        `;
+
+        setTimeout(() => {
+
+            card.innerHTML = `
+
+                <p class="eyebrow">
+                    ✦ REWARD OBTAINED ✦
+                </p>
+
+                <h1>
+                    MYTHIC LOOT
+                </h1>
+
+                <div class="profile-box loot-list">
+
+                    <strong>
+                        Gaming Collection
+                    </strong>
+
+                    <span>
+                        ✦ Hollow Knight Artifact
+                    </span>
+
+                    <span>
+                        ✦ Crash Bandicoot Memory
+                    </span>
+
+                    <span>
+                        ✦ Legendary Duo Buff
+                    </span>
+
+                </div>
+
+                <div class="profile-box">
+
+                    <span class="label">
+                        ACHIEVEMENT UNLOCKED
+                    </span>
+
+                    <strong>
+                        Best Support Teammate
+                    </strong>
+
+                </div>
+
+            `;
+
+        }, 2500);
+
+    }
+
+     function bindCursorMode(element) {
+
+        if (!cursor || element.dataset.cursorBound === "true") {
+            return;
+        }
+
+        element.dataset.cursorBound = "true";
+
+        element.addEventListener("mouseenter", () => {
+            cursor.classList.add("scan");
+        });
+
+        element.addEventListener("mouseleave", () => {
+            cursor.classList.remove("scan");
+        });
+
+    }
+
+    function bindInteractiveElements(root = document) {
+
+        root.querySelectorAll("[data-next]").forEach(button => {
+
+            if (button.dataset.navigationBound === "true") {
+                return;
+            }
+
+            button.dataset.navigationBound = "true";
+
+            button.addEventListener("click", () => {
+
+                changeScreen(
+                    button.dataset.next
+                );
+
+            });
+
+        });
+
+        root
+            .querySelectorAll(
+                "button, .achievement-card"
+            )
+            .forEach(bindCursorMode);
+
+    }
+
+    function bindAchievementFlip() {
+
+        document
+            .querySelectorAll(".achievement-card")
+            .forEach(card => {
+
+                card.addEventListener("click", () => {
+
+                    card.classList.toggle(
+                        "is-flipped"
+                    );
+
+                });
+
+                card.addEventListener("keydown", e => {
+
+                    if (
+                        e.key === "Enter" ||
+                        e.key === " "
+                    ) {
+
+                        e.preventDefault();
+
+                        card.classList.toggle(
+                            "is-flipped"
+                        );
+
+                    }
+
+                });
+
+            });
+
+    }
+
+    function bindSpecialButtons() {
+
+        document
+            .getElementById("scan-button")
+            ?.addEventListener(
+                "click",
+                revealChampion
+            );
+
+        document
+            .getElementById("open-loot-button")
+            ?.addEventListener(
+                "click",
+                openLoot
+            );
+
+    }
+
+    function bindCursorMovement() {
+
+        if (!cursor || !particleContainer) {
+            return;
+        }
+
+        document.addEventListener(
+            "mousemove",
+            e => {
+
+                cursor.style.left =
+                    e.clientX + "px";
+
+                cursor.style.top =
+                    e.clientY + "px";
+
+                const now =
+                    performance.now();
+
+                if (
+                    now - lastParticleTime <
+                    35
+                ) {
+                    return;
+                }
+
+                lastParticleTime = now;
+
+                const particle =
+                    document.createElement("div");
+
+                particle.className =
+                    "cursor-particle";
+
+                if (
+                    cursor.classList.contains(
+                        "scan"
+                    )
+                ) {
+
+                    particle.classList.add(
+                        "scan-particle"
+                    );
+
+                }
+
+                particle.style.left =
+                    e.clientX + "px";
+
+                particle.style.top =
+                    e.clientY + "px";
+
+                particleContainer.appendChild(
+                    particle
+                );
+
+                setTimeout(() => {
+
+                    particle.remove();
+
+                }, 760);
+
+            }
+
+        );
+
+    }
+
+    function init() {
+
+        bindInteractiveElements();
+
+        bindAchievementFlip();
+
+        bindSpecialButtons();
+
+        bindCursorMovement();
+
+        setTimeout(() => {
+
+            changeScreen(
+                "profile"
+            );
+
+        }, 3500);
+
+    }
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        init
     );
 
-}
-
-
-
-function openLoot(){
-
-
-const card =
-document.querySelector("#loot .card");
-
-
-card.innerHTML = `
-
-
-<p class="gold">
-✦ UNLOCKING LOOT ✦
-</p>
-
-
-<h1>
-OPENING...
-</h1>
-
-
-<div class="profile-box">
-
-ANALYZING REWARD DATA...
-
-<br><br>
-
-████░░░░░░
-
-</div>
-
-
-`;
-
-
-
-setTimeout(()=>{
-
-
-card.innerHTML = `
-
-
-<p class="gold">
-✦ REWARD OBTAINED ✦
-</p>
-
-
-<h1>
-MYTHIC LOOT
-</h1>
-
-
-
-<div class="profile-box">
-
-🎮 Gaming Collection
-
-<br><br>
-
-✦ Hollow Knight Artifact
-
-<br>
-
-✦ Crash Bandicoot Memory
-
-<br>
-
-✦ Legendary Duo Buff
-
-
-</div>
-
-
-
-<div class="profile-box">
-
-
-ACHIEVEMENT UNLOCKED
-
-<br>
-
-<strong>
-Best Support Teammate
-</strong>
-
-
-</div>
-
-
-`;
-
-
-},2500);
-
-
-}
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-const cursor =
-document.getElementById("cursor");
-
-
-cursor.style.left =
-e.clientX + "px";
-
-
-cursor.style.top =
-e.clientY + "px";
-
-
-});
-
-const cursor =
-document.getElementById("cursor");
-
-
-document
-.querySelectorAll("button")
-.forEach(button=>{
-
-
-button.addEventListener(
-"mouseenter",
-()=>{
-
-cursor.classList.add("scan");
-
-});
-
-
-button.addEventListener(
-"mouseleave",
-()=>{
-
-cursor.classList.remove("scan");
-
-});
-
-
-});
-
-const particleContainer =
-document.getElementById("cursor-particles");
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-const particle =
-document.createElement("div");
-
-
-particle.className =
-"cursor-particle";
-
-
-particle.style.left =
-e.clientX + "px";
-
-
-particle.style.top =
-e.clientY + "px";
-
-
-
-particleContainer.appendChild(particle);
-
-
-
-setTimeout(()=>{
-
-particle.remove();
-
-},800);
-
-
-
-});
-
-function animateAchievements(){
-
-const cards =
-document.querySelectorAll(".achievement-card");
-
-cards.forEach(card=>{
-
-card.classList.remove("show");
-
-});
-
-cards.forEach((card,index)=>{
-
-setTimeout(()=>{
-
-card.classList.add("show");
-
-},250*index);
-
-});
-
-}
-
+})();
