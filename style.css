@@ -1246,3 +1246,53 @@ button:active {
     opacity: 1;
     transform: translateX(0);
 }
+
+
+.thanks-card {
+    width: min(650px, 90vw);
+    max-height: 90vh;
+    padding: 32px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.thanks-card h1 {
+    margin-bottom: 6px;
+}
+
+.thanks-card .title {
+    margin-bottom: 18px;
+}
+
+.thanks-card .profile-box {
+    margin-top: 14px;
+}
+
+.thanks-note p {
+    margin: 0 0 14px;
+    line-height: 1.5;
+    color: #d7c9a2;
+}
+
+.feature-added {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.35rem;
+}
+
+.thanks-text {
+    margin: 0;
+    line-height: 1.55;
+    color: #d7c9a2;
+    font-size: 0.95rem;
+}
+
+.thanks-status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.thanks-status-grid .profile-box {
+    min-width: 0;
+}
