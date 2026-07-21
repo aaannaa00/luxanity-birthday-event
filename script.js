@@ -364,9 +364,7 @@ function changeScreen(nextId) {
             playSound(hoverSound, 0.15);
         });
 
-            });
-
-        }
+        });
 
         root
             .querySelectorAll(
