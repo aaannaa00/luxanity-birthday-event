@@ -24,28 +24,93 @@
         return document.getElementById(id);
     }
 
-    function changeScreen(nextId) {
+const hoverSound = document.getElementById("hover-sound");
+const clickSound = document.getElementById("click-sound");
+const revealSound = document.getElementById("reveal-sound");
 
-        if (!SCREEN_IDS.includes(nextId)) {
-            console.error(`Unknown screen: ${nextId}`);
-            return;
-        }
+let soundEnabled = true;
 
-        SCREEN_IDS.forEach(id => {
-            getScreen(id)?.classList.toggle(
-                "hidden",
-                id !== nextId
-            );
-        });
+function playSound(audio, volume = 0.3) {
 
-        if (nextId === "achievements") {
-            setTimeout(
-                animateAchievements,
-                120
-            );
-        }
+    if (!soundEnabled || !audio) {
+        return;
     }
 
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = volume;
+
+    audio.play().catch(() => {
+        // Browser može blokirati zvuk pre prve korisničke interakcije.
+    });
+}
+    
+let isTransitioning = false;
+
+function changeScreen(nextId) {
+
+    if (!SCREEN_IDS.includes(nextId)) {
+        console.error(`Unknown screen: ${nextId}`);
+        return;
+    }
+
+    if (isTransitioning) {
+        return;
+    }
+
+    const currentScreen = SCREEN_IDS
+        .map(getScreen)
+        .find(screen => screen && !screen.classList.contains("hidden"));
+
+    const nextScreen = getScreen(nextId);
+
+    if (!nextScreen || currentScreen === nextScreen) {
+        return;
+    }
+
+    isTransitioning = true;
+
+    if (!currentScreen) {
+        nextScreen.classList.remove("hidden");
+        isTransitioning = false;
+        return;
+    }
+
+    currentScreen.classList.add("screen-exit");
+
+    setTimeout(() => {
+
+        currentScreen.classList.add("hidden");
+        currentScreen.classList.remove("screen-exit");
+
+        nextScreen.classList.remove("hidden");
+        nextScreen.classList.add("screen-enter");
+
+        requestAnimationFrame(() => {
+
+            requestAnimationFrame(() => {
+                nextScreen.classList.add("screen-enter-active");
+            });
+
+        });
+
+        setTimeout(() => {
+
+            nextScreen.classList.remove(
+                "screen-enter",
+                "screen-enter-active"
+            );
+
+            isTransitioning = false;
+
+            if (nextId === "achievements") {
+                animateAchievements();
+            }
+
+        }, 380);
+
+    }, 350);
+}
     function animateAchievements() {
 
         const cards =
@@ -72,6 +137,7 @@
 
     function revealChampion() {
 
+        playSound(revealSound, 0.45);
         const card =
             document.querySelector("#duo .card");
 
@@ -174,7 +240,7 @@
     }
 
     function openLoot() {
-
+       playSound(revealSound, 0.45);
         const card =
             document.querySelector("#loot .card");
 
@@ -284,11 +350,19 @@
 
             button.dataset.navigationBound = "true";
 
-            button.addEventListener("click", () => {
+         button.addEventListener("click", () => {
 
-                changeScreen(
-                    button.dataset.next
-                );
+            playSound(clickSound, 0.35);
+        
+            changeScreen(
+                button.dataset.next
+            );
+
+         });
+
+        button.addEventListener("mouseenter", () => {
+            playSound(hoverSound, 0.15);
+        });
 
             });
 
