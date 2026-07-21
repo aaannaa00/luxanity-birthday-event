@@ -366,7 +366,7 @@ function changeScreen(nextId) {
 
             });
 
-        });
+        }
 
         root
             .querySelectorAll(
