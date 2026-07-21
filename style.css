@@ -1218,3 +1218,31 @@ button:active {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   SCREEN TRANSITIONS
+========================================== */
+
+.screen {
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.screen.screen-exit {
+    opacity: 0;
+    transform: translateX(-45px);
+    pointer-events: none;
+}
+
+.screen.screen-enter {
+    opacity: 0;
+    transform: translateX(45px);
+}
+
+.screen.screen-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
