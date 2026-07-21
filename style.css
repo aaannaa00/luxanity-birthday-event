@@ -1339,3 +1339,89 @@ font-weight:bold;
 letter-spacing:2px;
 
 }
+
+.common{
+
+box-shadow:0 0 10px rgba(190,190,190,.08);
+
+}
+
+.common:hover{
+
+box-shadow:0 0 15px rgba(190,190,190,.25);
+
+}
+
+.rare{
+
+box-shadow:0 0 10px rgba(0,170,255,.12);
+
+}
+
+.rare:hover{
+
+box-shadow:0 0 18px rgba(0,170,255,.45);
+
+}
+
+.epic{
+
+box-shadow:0 0 10px rgba(170,80,255,.12);
+
+}
+
+.epic:hover{
+
+box-shadow:0 0 18px rgba(170,80,255,.45);
+
+}
+
+.legendary{
+
+box-shadow:0 0 10px rgba(255,205,70,.15);
+
+}
+
+.legendary:hover{
+
+box-shadow:0 0 22px rgba(255,205,70,.55);
+
+}
+
+.legacy{
+
+box-shadow:0 0 10px rgba(0,230,255,.10);
+
+}
+
+.legacy:hover{
+
+box-shadow:0 0 20px rgba(0,230,255,.45);
+
+}
+
+.mythic{
+
+background:
+
+linear-gradient(
+135deg,
+rgba(35,55,90,.85),
+rgba(18,25,40,.95)
+);
+
+border:1px solid #f1d98a;
+
+box-shadow:
+
+0 0 15px rgba(241,217,138,.25);
+
+}
+
+.mythic:hover{
+
+box-shadow:
+
+0 0 28px rgba(241,217,138,.65);
+
+}
